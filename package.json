@@ -6,9 +6,10 @@
   "scripts": {
     "start": "run-p serve watch-bundle watch-ts",
     "serve": "st --no-cache -d dist -p 1337",
-    "watch-bundle": "watchify -v --debug dist/index.js -o dist/main.js",
+    "watch-bundle": "watchify -v --debug dist/app.js -o dist/main.js",
     "watch-ts": "tsc -w -p tsconfig.json",
-    "build": "tsc -p tsconfig.json && browserify --debug dist/index.js -o dist/main.js"
+    "build": "tsc -p tsconfig.json && browserify --debug dist/app.js -o dist/main.js",
+    "bundle-deps": "tsc -p  tsconfig.json && browserify --standalone threed --debug dist/deps-bundle.js > bundle.js"
   },
   "keywords": [],
   "author": "",
