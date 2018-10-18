@@ -9,7 +9,8 @@
     "watch-bundle": "watchify -v --debug dist/app.js -o dist/main.js",
     "watch-ts": "tsc -w -p tsconfig.json",
     "build": "tsc -p tsconfig.json && browserify --debug dist/app.js -o dist/main.js",
-    "bundle-deps": "tsc -p  tsconfig.json && browserify --standalone threed --debug dist/deps-bundle.js > bundle.js"
+    "bundle-deps": "tsc -p  tsconfig.json && browserify --standalone threed --debug dist/deps-bundle.js > bundle.js",
+    "bundle-camera": "browserify --standalone reglCamera node_modules/regl-camera/regl-camera.js > regl-camera-bundle.js"
   },
   "keywords": [],
   "author": "",
